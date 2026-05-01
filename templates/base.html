@@ -299,6 +299,14 @@ Make small manual edits only, then save and test in the browser. -->
       </div>
     </header>
 
+    {% if messages %}
+  <div class="container" id="django-messages">
+    {% for message in messages %}
+      <p class="alert alert-info">{{ message }}</p>
+    {% endfor %}
+  </div>
+{% endif %}
+
     {% block content %}
     {% endblock %}
 
@@ -341,10 +349,23 @@ Make small manual edits only, then save and test in the browser. -->
           <div class="flex-child-ft item5">
             <h4>Newsletter</h4>
             <p>Subscribe to our newsletter system now <br />to get latest news from us.</p>
-            <form action="#">
-              <input type="text" placeholder="Enter your email..." />
-            </form>
-            <a href="#" class="btn">Subscribe now <i class="ion-ios-arrow-forward"></i></a>
+            <<form method="post" action="{% url 'newsletter_subscribe' %}">
+  {% csrf_token %}
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter your email..."
+    required
+  />
+
+  <a
+    href="#"
+    class="btn"
+    onclick="this.closest('form').submit(); return false;"
+  >
+    Subscribe now <i class="ion-ios-arrow-forward"></i>
+  </a>
+</form>
           </div>
         </div>
       </div>
@@ -362,5 +383,22 @@ Make small manual edits only, then save and test in the browser. -->
     <script src="{% static 'js/plugins.js' %}"></script>
     <script src="{% static 'js/plugins2.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
+
+    <script>
+  setTimeout(function () {
+    const messages = document.getElementById("django-messages");
+
+    if (messages) {
+      messages.style.transition = "opacity 0.5s ease";
+      messages.style.opacity = "0";
+
+      setTimeout(function () {
+        messages.remove();
+      }, 500);
+    }
+  }, 3000);
+</script>
+
+
   </body>
 </html>

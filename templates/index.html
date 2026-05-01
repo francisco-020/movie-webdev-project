@@ -235,25 +235,30 @@ Make small manual edits only, then save and test in the browser. -->
     <div class="row ipad-width">
       <div class="col-md-12">
         <div class="title-hd">
-          <h2>in theater</h2>
+          <h2>Trailers</h2>
           <a href="#" class="viewall">View all <i class="ion-ios-arrow-right"></i></a>
         </div>
         <div class="videos">
           <div class="slider-for-2 video-ft">
             {% if trailer %}
-            <div>
-              <iframe
-                class="item-video"
-                src="#"
-                data-src="{{ trailer.trailer_url }}"
-              ></iframe>
-            </div>
-            {% endif %}
+<div>
+  <iframe
+    id="main-trailer"
+    class="item-video"
+    src="{{ trailer.trailer_url }}"
+    title="Movie trailer"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+</div>
+{% endif %}
           </div>
 
           <div class="slider-nav-2 thumb-ft">
             {% for item in trailer_items %}
-            <div class="item">
+  <div class="item trailer-thumb" data-video="{{ item.trailer_url }}">
               <div class="trailer-img">
                 <img
                   src="{% static item.img_src %}"
@@ -349,7 +354,7 @@ Make small manual edits only, then save and test in the browser. -->
                 <h4 class="sb-title">Tweet to us</h4>
 				<div class="slick-tw">
 					{% for tweet in tweets %}
-					<div class="tweet item" id="">
+					<div class="tweet item">
 						{{ tweet.content }}
 					</div>
 					{% endfor %}
@@ -360,5 +365,24 @@ Make small manual edits only, then save and test in the browser. -->
         </div>
       </div>
     </div>
+
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mainTrailer = document.getElementById("main-trailer");
+    const trailerThumbs = document.querySelectorAll(".trailer-thumb");
+
+    trailerThumbs.forEach(function (thumb) {
+      thumb.addEventListener("click", function () {
+        const videoUrl = thumb.getAttribute("data-video");
+
+        if (videoUrl && mainTrailer) {
+          mainTrailer.src = videoUrl;
+        }
+      });
+    });
+  });
+</script>
+
 
 {% endblock %}
