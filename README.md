@@ -155,23 +155,91 @@ Example database values in `.env`:
 
 ### 7. Run migrations
 
+#### Windows
+
     python manage.py migrate
+
+#### macOS / Linux
+
+    python3 manage.py migrate
 
 This creates the Django tables in your local PostgreSQL database.
 
+## Load Sample Data
+
+After running migrations, load the shared project data from the fixture file.
+
+### 8. Load the sample data
+
+#### Windows Git Bash, Command Prompt, or PowerShell
+
+    python manage.py loaddata sample_data
+
+#### macOS / Linux
+
+    python3 manage.py loaddata sample_data
+
+This loads the shared movie, slider, social link, celebrity, trailer, news, tweet, and related homepage data into your local PostgreSQL database.
+
+## If You Get a Fixture Encoding Error
+
+On some machines, especially Windows, the `sample_data.json` file may occasionally be saved with the wrong encoding. If that happens, you may see an error similar to:
+
+    UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0
+
+If that happens, convert the fixture file to UTF-8 and then run `loaddata` again.
+
+### Windows fix
+
+Run:
+
+    python -c "from pathlib import Path; p=Path('movies/fixtures/sample_data.json'); text=p.read_text(encoding='utf-16'); p.write_text(text, encoding='utf-8')"
+
+Then run:
+
+    python manage.py loaddata sample_data
+
+### macOS / Linux fix
+
+Run:
+
+    python3 -c "from pathlib import Path; p=Path('movies/fixtures/sample_data.json'); text=p.read_text(encoding='utf-16'); p.write_text(text, encoding='utf-8')"
+
+Then run:
+
+    python3 manage.py loaddata sample_data
+
+### Important note
+
+You only need to use the encoding fix command if the normal `loaddata` command gives the UTF-8 decode error.
+
+If `python manage.py loaddata sample_data` or `python3 manage.py loaddata sample_data` works normally, do not run the encoding fix.
+
 ## Create an Admin Account
 
-### 8. Create a superuser
+### 9. Create a superuser
+
+#### Windows
 
     python manage.py createsuperuser
+
+#### macOS / Linux
+
+    python3 manage.py createsuperuser
 
 Use your own username, email, and password.
 
 ## Run the Project
 
-### 9. Start the development server
+### 10. Start the development server
+
+#### Windows
 
     python manage.py runserver
+
+#### macOS / Linux
+
+    python3 manage.py runserver
 
 Then open:
 
