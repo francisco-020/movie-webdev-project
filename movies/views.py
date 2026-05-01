@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import (
     Slider,
     Advertisement,
@@ -10,6 +11,7 @@ from .models import (
     Tweet,
     MovieTheater,
     MovieTV,
+    NewsletterSubscriber,
 )
 
 
@@ -37,3 +39,19 @@ def home(request):
 
 def movie_single(request):
     return render(request, 'moviesingle.html')
+
+
+
+def newsletter_subscribe(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+
+        if email:
+            subscriber, created = NewsletterSubscriber.objects.get_or_create(email=email)
+
+            if created:
+                messages.success(request, "Thank you for subscribing to our newsletter!")
+            else:
+                messages.info(request, "This email is already subscribed.")
+
+    return redirect("home")

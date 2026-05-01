@@ -65,6 +65,7 @@ class TrailerItem(models.Model):
     img_height = models.IntegerField()
     description = models.CharField(max_length=100)
     duration = models.CharField(max_length=10)
+    trailer_url = models.CharField(max_length=200, blank=True)
 
     def __str__(self):
         return self.description
@@ -130,3 +131,12 @@ class MovieTV(models.Model):
 
     def __str__(self):
         return self.movie_title
+    
+
+    
+class NewsletterSubscriber(models.Model):
+    email = models.EmailField(unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email
