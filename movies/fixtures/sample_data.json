@@ -3,12 +3,12 @@
   "model": "movies.slider",
   "pk": 1,
   "fields": {
-    "image_src": "images/uploads/slider1.jpg",
+    "image_src": "images\\uploads\\film.jpeg",
     "image_width": 285,
     "image_height": 437,
-    "anchor_url": "#",
-    "movie_genre": "Sci-fi",
-    "movie_title": "Interstellar",
+    "anchor_url": "/moviesingle/",
+    "movie_genre": "Horror",
+    "movie_title": "It",
     "lower_rating": "7.4",
     "upper_rating": "10"
   }
@@ -20,7 +20,7 @@
     "image_src": "images/uploads/slider2.jpg",
     "image_width": 285,
     "image_height": 437,
-    "anchor_url": "#",
+    "anchor_url": "/moviesingle/",
     "movie_genre": "Action",
     "movie_title": "The Revenant",
     "lower_rating": "7.4",
@@ -31,12 +31,12 @@
   "model": "movies.slider",
   "pk": 3,
   "fields": {
-    "image_src": "images/uploads/slider3.jpg",
+    "image_src": "images/uploads/mv-it10.jpg",
     "image_width": 285,
     "image_height": 437,
-    "anchor_url": "#",
+    "anchor_url": "/moviesingle/",
     "movie_genre": "Comedy",
-    "movie_title": "Die Hard",
+    "movie_title": "Harry Potter",
     "lower_rating": "7.4",
     "upper_rating": "10"
   }
@@ -45,12 +45,12 @@
   "model": "movies.slider",
   "pk": 4,
   "fields": {
-    "image_src": "images/uploads/slider4.jpg",
+    "image_src": "images/uploads/mv-it8.jpg",
     "image_width": 285,
     "image_height": 437,
-    "anchor_url": "#",
+    "anchor_url": "/moviesingle/",
     "movie_genre": "Sci-fi",
-    "movie_title": "The Walk",
+    "movie_title": "Inception",
     "lower_rating": "7.4",
     "upper_rating": "10"
   }
@@ -59,12 +59,54 @@
   "model": "movies.slider",
   "pk": 5,
   "fields": {
-    "image_src": "images/uploads/slider1.jpg",
+    "image_src": "images/uploads/mv-item1.jpg",
     "image_width": 285,
     "image_height": 437,
-    "anchor_url": "#",
+    "anchor_url": "/moviesingle/",
     "movie_genre": "Sci-fi",
     "movie_title": "Interstellar",
+    "lower_rating": "7.4",
+    "upper_rating": "10"
+  }
+},
+{
+  "model": "movies.slider",
+  "pk": 6,
+  "fields": {
+    "image_src": "images/uploads/mv-item12.jpg",
+    "image_width": 285,
+    "image_height": 437,
+    "anchor_url": "/moviesingle/",
+    "movie_genre": "Sci-fi",
+    "movie_title": "La La Land",
+    "lower_rating": "7.4",
+    "upper_rating": "10"
+  }
+},
+{
+  "model": "movies.slider",
+  "pk": 7,
+  "fields": {
+    "image_src": "images/uploads/mv-item11.jpg",
+    "image_width": 285,
+    "image_height": 437,
+    "anchor_url": "/moviesingle/",
+    "movie_genre": "Sci-fi",
+    "movie_title": "Stranger Things",
+    "lower_rating": "7.4",
+    "upper_rating": "10"
+  }
+},
+{
+  "model": "movies.slider",
+  "pk": 8,
+  "fields": {
+    "image_src": "images/uploads/mv-item6.jpg",
+    "image_width": 285,
+    "image_height": 437,
+    "anchor_url": "/moviesingle/",
+    "movie_genre": "Action",
+    "movie_title": "Blue Velvet",
     "lower_rating": "7.4",
     "upper_rating": "10"
   }
@@ -185,6 +227,41 @@
   }
 },
 {
+  "model": "movies.trailer",
+  "pk": 2,
+  "fields": {
+    "trailer_url": "https://www.youtube.com/embed/uisBaTkQAEs?si=2h1lEdAOra0fXScf"
+  }
+},
+{
+  "model": "movies.trailer",
+  "pk": 3,
+  "fields": {
+    "trailer_url": "https://www.youtube.com/embed/k-AyhL9AR9Q?si=5YBJUHi9plEOgRsq"
+  }
+},
+{
+  "model": "movies.trailer",
+  "pk": 4,
+  "fields": {
+    "trailer_url": "https://www.youtube.com/embed/RKy0915IUkQ?si=XbEr2u9kuTdA6Koq"
+  }
+},
+{
+  "model": "movies.trailer",
+  "pk": 5,
+  "fields": {
+    "trailer_url": "https://www.youtube.com/embed/gN4Hi_Ctf3Y?si=vNYodL9Kj-5B9XB2"
+  }
+},
+{
+  "model": "movies.trailer",
+  "pk": 6,
+  "fields": {
+    "trailer_url": "https://www.youtube.com/embed/tx6_JMDFfWI?si=oqSlEx_A9fjMy5Qd"
+  }
+},
+{
   "model": "movies.traileritem",
   "pk": 1,
   "fields": {
@@ -193,7 +270,8 @@
     "img_width": 4096,
     "img_height": 2737,
     "description": "Wonder Woman",
-    "duration": "2:30"
+    "duration": "2:30",
+    "trailer_url": ""
   }
 },
 {
@@ -205,7 +283,8 @@
     "img_width": 350,
     "img_height": 200,
     "description": "Oblivion: Official Teaser Trailer",
-    "duration": "2:37"
+    "duration": "2:37",
+    "trailer_url": "https://www.youtube.com/embed/tx6_JMDFfWI?si=oqSlEx_A9fjMy5Qd"
   }
 },
 {
@@ -217,7 +296,8 @@
     "img_width": 100,
     "img_height": 59,
     "description": "Exclusive Interview: Skull Island",
-    "duration": "2:44"
+    "duration": "2:44",
+    "trailer_url": "https://www.youtube.com/embed/gN4Hi_Ctf3Y?si=vNYodL9Kj-5B9XB2"
   }
 },
 {
@@ -229,7 +309,8 @@
     "img_width": 100,
     "img_height": 56,
     "description": "Logan: Director James Mangold Interview",
-    "duration": "2:43"
+    "duration": "2:43",
+    "trailer_url": "https://www.youtube.com/embed/RKy0915IUkQ?si=XbEr2u9kuTdA6Koq"
   }
 },
 {
@@ -241,7 +322,8 @@
     "img_width": 100,
     "img_height": 56,
     "description": "Beauty and the Beast: Official Teaser Trailer 2",
-    "duration": "2:32"
+    "duration": "2:32",
+    "trailer_url": "https://www.youtube.com/embed/k-AyhL9AR9Q?si=5YBJUHi9plEOgRsq"
   }
 },
 {
@@ -253,7 +335,8 @@
     "img_width": 360,
     "img_height": 189,
     "description": "Fast&Furious 8",
-    "duration": "3:11"
+    "duration": "3:11",
+    "trailer_url": "https://www.youtube.com/embed/uisBaTkQAEs?si=2h1lEdAOra0fXScf"
   }
 },
 {
@@ -398,7 +481,7 @@
   "pk": 5,
   "fields": {
     "type": "coming_soon",
-    "img_src": "images/uploads/mv-item5.jpg",
+    "img_src": "images/uploads/int2.jpg",
     "img_width": 185,
     "img_height": 284,
     "anchor_url": "/moviesingle/",
@@ -413,7 +496,7 @@
   "pk": 6,
   "fields": {
     "type": "coming_soon",
-    "img_src": "images/uploads/mv-item6.jpg",
+    "img_src": "images/uploads/rev2.jpg",
     "img_width": 185,
     "img_height": 284,
     "anchor_url": "/moviesingle/",
@@ -428,12 +511,12 @@
   "pk": 1,
   "fields": {
     "type": "popular",
-    "img_src": "images/uploads/mv-item1.jpg",
+    "img_src": "images/uploads/mv-it12.jpg",
     "img_width": 185,
     "img_height": 284,
     "anchor_url": "/moviesingle/",
     "movie_genre": "Sci-fi",
-    "movie_title": "Interstellar",
+    "movie_title": "The Godfather",
     "lower_rating": "7.4",
     "upper_rating": "10"
   }
@@ -443,12 +526,12 @@
   "pk": 2,
   "fields": {
     "type": "popular",
-    "img_src": "images/uploads/mv-item2.jpg",
+    "img_src": "images/uploads/mv-item8.jpg",
     "img_width": 185,
     "img_height": 284,
     "anchor_url": "/moviesingle/",
     "movie_genre": "Action",
-    "movie_title": "The Revenant",
+    "movie_title": "Southpaw",
     "lower_rating": "7.4",
     "upper_rating": "10"
   }
@@ -458,12 +541,12 @@
   "pk": 3,
   "fields": {
     "type": "coming_soon",
-    "img_src": "images/uploads/mv-item5.jpg",
+    "img_src": "images/uploads/doom.jpg",
     "img_width": 185,
     "img_height": 284,
     "anchor_url": "/moviesingle/",
-    "movie_genre": "Sci-fi",
-    "movie_title": "Interstellar",
+    "movie_genre": "Action",
+    "movie_title": "Avengers: Doomsday",
     "lower_rating": "7.4",
     "upper_rating": "10"
   }
@@ -473,14 +556,83 @@
   "pk": 4,
   "fields": {
     "type": "coming_soon",
-    "img_src": "images/uploads/mv-item6.jpg",
+    "img_src": "images/uploads/coraline.jpg",
     "img_width": 185,
-    "img_height": 284,
+    "img_height": 274,
     "anchor_url": "/moviesingle/",
     "movie_genre": "Action",
-    "movie_title": "The Revenant",
+    "movie_title": "Coraline 2",
     "lower_rating": "7.4",
     "upper_rating": "10"
+  }
+},
+{
+  "model": "movies.movietv",
+  "pk": 5,
+  "fields": {
+    "type": "popular",
+    "img_src": "images/uploads/mv-it9.jpg",
+    "img_width": 185,
+    "img_height": 274,
+    "anchor_url": "/moviesingle/",
+    "movie_genre": "Adventure",
+    "movie_title": "Jurassic Park",
+    "lower_rating": "7.4",
+    "upper_rating": "10"
+  }
+},
+{
+  "model": "movies.movietv",
+  "pk": 6,
+  "fields": {
+    "type": "popular",
+    "img_src": "images/uploads/mv-it11.jpg",
+    "img_width": 185,
+    "img_height": 274,
+    "anchor_url": "/moviesingle/",
+    "movie_genre": "Sci-fi",
+    "movie_title": "Guardians of the G..",
+    "lower_rating": "7.4",
+    "upper_rating": "10"
+  }
+},
+{
+  "model": "movies.movietv",
+  "pk": 7,
+  "fields": {
+    "type": "popular",
+    "img_src": "images/uploads/mv-item10.jpg",
+    "img_width": 185,
+    "img_height": 274,
+    "anchor_url": "/moviesingle/",
+    "movie_genre": "Action",
+    "movie_title": "Spectre",
+    "lower_rating": "7.4",
+    "upper_rating": "10"
+  }
+},
+{
+  "model": "movies.newslettersubscriber",
+  "pk": 1,
+  "fields": {
+    "email": "someone@icloud.com",
+    "created_at": "2026-05-01T07:23:48.199Z"
+  }
+},
+{
+  "model": "movies.newslettersubscriber",
+  "pk": 2,
+  "fields": {
+    "email": "someone.else@icloud.com",
+    "created_at": "2026-05-01T07:25:33.340Z"
+  }
+},
+{
+  "model": "movies.newslettersubscriber",
+  "pk": 3,
+  "fields": {
+    "email": "idk.you@gmail.com",
+    "created_at": "2026-05-01T07:32:20.249Z"
   }
 }
 ]
