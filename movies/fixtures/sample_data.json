@@ -634,5 +634,21 @@
     "email": "idk.you@gmail.com",
     "created_at": "2026-05-01T07:32:20.249Z"
   }
+},
+{
+  "model": "movies.newslettersubscriber",
+  "pk": 4,
+  "fields": {
+    "email": "alanfrancisco6200@gmail.com",
+    "created_at": "2026-05-01T20:48:42.744Z"
+  }
+},
+{
+  "model": "movies.newslettersubscriber",
+  "pk": 5,
+  "fields": {
+    "email": "hell0@gmail.com",
+    "created_at": "2026-05-01T21:17:17.765Z"
+  }
 }
 ]
